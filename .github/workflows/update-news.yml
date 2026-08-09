@@ -1,0 +1,31 @@
+name: Update news from PR TIMES
+on:
+  schedule:
+    - cron: '0 21 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build news.json
+        run: |
+          python3 - << 'EOF'
+          import urllib.request, re, json, html
+          req = urllib.request.Request('https://prtimes.jp/companyrdf.php?company_id=16416', headers={'User-Agent':'Mozilla/5.0'})
+          xml = urllib.request.urlopen(req, timeout=30).read().decode('utf-8')
+          items = re.findall(r'<item rdf:about="([^"]+)">.*?<title>(.*?)</title>.*?<dc:date>(.*?)</dc:date>', xml, re.S)
+          out = [{'t': html.unescape(t).strip(), 'u': u.strip(), 'd': d.strip()[:10]} for u, t, d in items[:30]]
+          out.sort(key=lambda x: x['d'], reverse=True)
+          json.dump(out, open('news.json', 'w'), ensure_ascii=False)
+          print(len(out), 'items')
+          EOF
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add news.json
+          git diff --cached --quiet || (git commit -m "Update news from PR TIMES" && git push)
+

@@ -355,7 +355,11 @@
   @media(max-width:860px){
     .burger{display:flex;}
     nav .nav-cta{display:none;}
+    nav .nav-in .langs{display:none;}
   }
+  .mm-langs{align-self:flex-start;margin:6px 0 12px;}
+  .foot-recruit{display:none;}
+  @media(max-width:860px){.foot-recruit{display:inline-block;margin-top:28px;}}
   @media(min-width:861px){.mobile-menu{display:none !important;}}
 
   /* ===== v3 motion: extreme ===== */
@@ -408,10 +412,13 @@
     font:inherit;font-size:14px;padding:12px 14px;outline:none;transition:border-color .25s,box-shadow .25s;}
   .cform input:focus,.cform select:focus,.cform textarea:focus{border-color:var(--lav);box-shadow:0 0 0 3px rgba(124,108,240,.15);background:#fff;}
   .cform textarea{min-height:140px;resize:vertical;}
+  .cform input[type=file]{padding:10px;background:#FBF9F6;font-size:12.5px;}
   .cform .send{margin-top:28px;}
   .cform .chks{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:2px;}
   .cform .chks label{display:flex;align-items:center;gap:7px;margin:0;font-size:12.5px;color:var(--ink);font-weight:700;letter-spacing:0;}
   .cform .chks input{width:auto;accent-color:var(--lav);}
+  .deckwrap{margin-top:20px;max-width:900px;position:relative;aspect-ratio:560/315;border-radius:14px;overflow:hidden;box-shadow:0 18px 40px rgba(27,23,35,.12);background:#120E18;}
+  .deckwrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
   .sentmsg{display:none;margin-top:16px;font-size:12.5px;font-weight:700;color:var(--lav);}
   .sentmsg.show{display:block;}
   .contact-direct{margin-top:26px;font-size:13px;color:var(--muted);}
@@ -431,6 +438,7 @@
   </div>
 </div>
 <div class="mobile-menu en">
+  <div class="langs mm-langs en"><button data-lang="ja" class="on">JA</button><button data-lang="en">EN</button><button data-lang="ko">KO</button></div>
   <a href="#home">TOP</a><a href="#about">ABOUT</a><a href="#company">COMPANY</a><a href="#news">NEWS</a><a href="#recruit">RECRUIT</a><a href="#contact">CONTACT</a>
   <a class="nav-cta" href="#recruit" style="text-align:center;margin-top:10px;">採用情報</a>
 </div>
@@ -669,7 +677,9 @@
       <div class="flowstep"><div class="n">04</div><div class="t">面接(1〜2回)</div><div class="d">現場メンバーと代表が対面で実施。</div></div>
       <div class="flowstep last"><div class="n" style="color:#B9AFF7;">05</div><div class="t">オファー</div><div class="d">条件をすり合わせ、入社日を決定。</div></div>
     </div>
-    <div style="margin-top:44px;display:flex;gap:14px;flex-wrap:wrap;"><a class="btn btn-primary" href="#entry">エントリー</a><a class="btn btn-ghost" href="recruit-deck.pdf" target="_blank" rel="noopener">採用ピッチ資料を見る</a></div>
+    <div class="kicker en" style="margin-top:60px;">PITCH DECK</div>
+    <div class="deckwrap"><iframe src="https://speakerdeck.com/player/8147f106cf524fe3bbb93699cfaf837b" title="モノック採用ピッチ資料" allowfullscreen loading="lazy"></iframe></div>
+    <a class="btn btn-primary" style="margin-top:44px;" href="#entry">エントリー</a>
   </div>
 </div>
 
@@ -680,7 +690,7 @@
     <p class="sec-lead">ご応募ありがとうございます。ご記入内容をもとに選考し、選考に進まれる方には1週間以内にご連絡します。</p>
   </div></div>
   <div class="container" style="padding-bottom:100px;">
-    <form class="cform" name="entry" method="POST" action="https://formspree.io/f/mwlevjov">
+    <form class="cform" name="entry" method="POST" action="https://formspree.io/f/moeajoey">
       <input type="hidden" name="_subject" value="【採用エントリー】monoc.inc">
       <input type="text" name="_gotcha" style="display:none">
       <label>応募職種</label>
@@ -707,6 +717,9 @@
       </div>
       <label>土日の展示会・イベント対応(振替休日あり)</label>
       <select name="土日対応"><option>対応できる</option><option>要相談</option><option>難しい</option></select>
+      <label>履歴書(任意)</label>
+      <input type="file" name="履歴書" accept=".pdf,.doc,.docx,.jpg,.png">
+      <p style="margin-top:8px;font-size:11.5px;color:var(--muted);">エントリー時の履歴書のご提出は任意です。</p>
       <label>自己PR・メッセージ(任意)</label><textarea name="メッセージ"></textarea>
       <button class="btn btn-primary send" type="submit">エントリーする</button>
     </form>
@@ -744,6 +757,7 @@
       <p>設立 2011年10月</p>
     </div>
   </div>
+  <a class="btn btn-primary foot-recruit" href="#recruit">採用情報を見る</a>
   <div class="foot-bottom en"><span>© MONOC Inc.</span><span>EMPOWER THE MAKER.</span></div>
 </div></footer>
 
@@ -1137,6 +1151,8 @@
 '化粧品業界での経験年数':['Years in the beauty industry','화장품 업계 경력'],
 '使用できるツール(複数選択可)':['Tools you can use (multiple)','사용 가능한 툴 (복수 선택)'],
 '土日の展示会・イベント対応(振替休日あり)':['Weekend events (with days off in lieu)','주말 전시·이벤트 대응 (대체휴일 있음)'],
+'履歴書(任意)':['Resume / CV (optional)','이력서 (선택)'],
+'エントリー時の履歴書のご提出は任意です。':['Submitting a resume at entry is optional.','지원 시 이력서 제출은 선택입니다.'],
 '自己PR・メッセージ(任意)':['Message (optional)','자기 PR·메시지 (선택)'],
 '営業':['Sales','영업'],
 '営業アシスタント':['Sales Assistant','영업 어시스턴트'],

@@ -337,6 +337,10 @@
   .ceo-msg p{font-size:13.5px;line-height:2;color:var(--ink);margin-top:14px;}
   .ceo-msg p:first-child{margin-top:0;}
   .ceo-msg .ceo-sign{margin-top:20px;font-weight:800;text-align:right;font-size:13.5px;}
+  .qa-wrap{max-width:760px;}
+  .qa-item{margin-top:36px;}
+  .qa-item .q{font-weight:800;font-size:15px;color:var(--ink);padding-left:16px;border-left:3px solid var(--lav);line-height:1.7;}
+  .qa-item .a p{font-size:13.5px;line-height:2;color:var(--ink);margin-top:12px;}
   .rolecards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px;}
   .rolecard{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:22px 20px;transition:transform .3s,box-shadow .3s;}
   .rolecard:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(27,23,35,.09);}
@@ -707,6 +711,11 @@
       <p>選考は、私たちが一方的に選ぶ場ではなく、あなたにとってモノックがいちばん力を発揮できる場所かどうかを、一緒に確かめる場だと思っています。少しでも面白そうだと思ったら、まずは気軽に話しに来てください。</p>
       <p class="ceo-sign">代表取締役　小澤 一郎</p>
     </div>
+    <div class="kicker en" style="margin-top:60px;">INTERVIEW</div>
+    <div class="qa-wrap">
+      <div class="qa-item"><div class="q">今回、営業職をはじめとする採用を強化していく背景を教えてください。</div><div class="a"><p>シンプルに言うと、事業の伸びに人が追いついていないんです。バニラコは2年で累計300万個を出荷して、取扱いは全国1万店舗まで広がりましたが、白地はまだまだ大きい。いまは「提案に行ける人の数が、そのまま売上の上限」になってしまっている状態です。</p><p>新しいブランドの立ち上げが、これからも続きます。この一番面白いタイミングを一緒に走ってくれる仲間が、どうしても必要なんです。</p></div></div><div class="qa-item"><div class="q">どのような方と一緒に働きたいと考えていますか。</div><div class="a"><p>スキルよりも姿勢です。ブランドの成長を自分ごととして動ける当事者意識。分からないことを素直に学べる向上心。AIを面白がれる好奇心。それから、手が空いたときに隣で困っている仲間に自然と声をかけられる人。少人数の会社なので、この最後の1つは本当に大事です。</p><p>逆に、指示待ちで決められたことだけやりたい方には、うちは窮屈だと思います。</p></div></div>
+      <a class="btn btn-ghost" style="margin-top:30px;" href="#interview">代表インタビュー全文を読む</a>
+    </div>
     <div class="kicker en" style="margin-top:60px;">PITCH DECK</div>
     <div class="deckwrap"><iframe src="https://speakerdeck.com/player/149787780e324302a0fd44fb4ce72f1f" title="モノック採用ピッチ資料" allowfullscreen loading="lazy"></iframe></div>
     <a class="btn btn-primary" style="margin-top:44px;" href="#entry">エントリー</a>
@@ -736,14 +745,14 @@
       <select name="業界経験"><option>経験なし</option><option>2年未満</option><option>2年以上</option></select>
       <label>使用できるツール(複数選択可)</label>
       <div class="chks">
-        <label><input type="checkbox" name="ツール" value="Illustrator">Illustrator</label>
-        <label><input type="checkbox" name="ツール" value="Photoshop">Photoshop</label>
-        <label><input type="checkbox" name="ツール" value="Canva">Canva</label>
+        <label><input type="checkbox" name="ツール" value="Mac">Mac</label>
         <label><input type="checkbox" name="ツール" value="PowerPoint・Googleスライド">PowerPoint・Googleスライド</label>
         <label><input type="checkbox" name="ツール" value="Excel・スプレッドシート">Excel・スプレッドシート</label>
         <label><input type="checkbox" name="ツール" value="SNS運用">SNS運用</label>
         <label><input type="checkbox" name="ツール" value="広告運用">広告運用</label>
-        <label><input type="checkbox" name="ツール" value="Mac">Mac</label>
+        <label><input type="checkbox" name="ツール" value="Illustrator">Illustrator</label>
+        <label><input type="checkbox" name="ツール" value="Photoshop">Photoshop</label>
+        <label><input type="checkbox" name="ツール" value="Canva">Canva</label>
       </div>
       <label>土日の展示会・イベント対応(振替休日あり)</label>
       <select name="土日対応"><option>対応できる</option><option>要相談</option><option>難しい</option></select>
@@ -753,6 +762,20 @@
       <label>自己PR・メッセージ(任意)</label><textarea name="メッセージ"></textarea>
       <button class="btn btn-primary send" type="submit">エントリーする</button>
     </form>
+  </div>
+</div>
+
+<div class="page" id="page-interview">
+  <div class="page-hero"><div class="container">
+    <div class="kicker en">INTERVIEW</div>
+    <h2>代表インタビュー</h2>
+    <p class="sec-lead">代表取締役 小澤一郎に、創業の背景からモノックのこれからまでを聞きました。</p>
+  </div></div>
+  <div class="container" style="padding-bottom:100px;">
+    <div class="qa-wrap">
+      <div class="qa-item"><div class="q">ご自身の経歴と、モノックを創業された背景を教えてください。</div><div class="a"><p>起業したのは2011年、明治大学の法学部に在学中のときです。最初につくったのは化粧品ではなくて、papelookという写真アプリでした。ありがたいことに世界で2,000万ダウンロードまで伸びて、富士フイルムさんやサンリオさんと提携したり、いま思えばずいぶん遠いところからスタートしています。</p><p>そこから化粧品メディアのFAVOR(最大で月間160万人に使っていただきました)、資生堂さんやコーセーさんなど大手のマーケティング支援、D2Cブランドの立ち上げ支援と、少しずつ「化粧品を売る側」に近づいていって、2024年にバニラコの日本展開でついにメーカー業に踏み込みました。15年やってきて業態は何度も変わっていますが、「新しいテクノロジーで事業をつくる」という軸だけは一度も変わっていません。</p></div></div><div class="qa-item"><div class="q">創業当初、印象に残っている苦労や転機があれば教えてください。</div><div class="a"><p>苦労はもう、数えきれないですね(笑)。うちは15年の間に、アプリ→メディア→支援業→メーカー業と、事業を何度もつくり変えてきた会社です。それまで積み上げたものを一度手放して次に行く瞬間は、毎回怖かったです。</p><p>転機は間違いなく2つあって、1つは2024年にバニラコの独占販売を始めたこと。支援する側から「自分たちのブランドとして売り切る側」に回ったことで、会社の景色が全部変わりました。もう1つは、AIです。バニラコで積み上がった膨大なデータの分析をAIに任せてみたら、2年間手が付けられなかったものが1日で終わってしまった。iPhoneを初めて手にしたとき以来の衝撃で、「これは会社のやり方ごと変えるべきだ」と腹が決まりました。</p></div></div><div class="qa-item"><div class="q">会社として大切にしているビジョンや価値観を教えてください。</div><div class="a"><p>ビジョンは「いいものが、正しく届く世界へ。」です。世の中には、思いを込めてつくられた良い商品が、広告の体力や販路の運がないだけで埋もれていくという理不尽が本当にたくさんあります。それを減らすのがモノックの存在意義だと思っています。</p><p>そのためのやり方が「思いを込めてつくられたものを、思いを込めて売り、広める。」。うちは輸入して卸すだけの会社ではなくて、ブランドに惚れ込んで、企画から売場づくり、販促まで全部自分たちでやります。そして日々の判断基準としては「売場に答えがある」。会議室で悩む前に店頭を見に行く。これは全員に共通するカルチャーですね。</p></div></div><div class="qa-item"><div class="q">事業を通じて、どのようなお客様・社会への価値提供を目指していますか。</div><div class="a"><p>うちは3者の間に立つ会社なんです。海外のブランド本社、小売のバイヤーさん、そして消費者の方。この3者をつなぐ仕事は、実はバラバラには成立しません。</p><p>モノックが間に立って、企画から売場・販促までまとめて担うことで、ブランドは日本で花開き、売場は賑わい、消費者は「これ欲しかった!」に出会える。この三方良しの実例を増やしていくことが、僕らの社会への貢献だと思っています。</p></div></div><div class="qa-item"><div class="q">会社を運営されてきた中で、ご自身が大切にしてきたことを教えてください。</div><div class="a"><p>信頼です。古い言葉ですが「信なくば、立たず」で、商売は信頼を失ったら終わりです。だから、うちは盛った言葉で売ることはしません。数字も正直に出すし、できないことはできないと言う。</p><p>もう1つは、黒字経営を続けることです。派手な赤字成長より、ちゃんと利益を出しながら伸びるほうが、ブランドにも社員にも誠実だと思っています。おかげさまで直近期は売上が前期比で約2.7倍になりましたが、利益もきちんと残せています。</p></div></div><div class="qa-item"><div class="q">現在の組織体制や、役割分担について教えてください。</div><div class="a"><p>十数名の少数精鋭です。大きくは、営業やマーケティングを担うセールス&マーケティング、ブランドマネージャーや商品企画からなるブランド・商品、そして財務や受発注・ロジスティクスを支えるコーポレート・オペレーションの3つに分かれています。</p><p>ただ、正直なところ役割の線引きはかなりゆるやかです。肩書きより役割、というのがうちの考え方で、一人が受け持つ範囲がそのまま裁量の大きさになる。代表の僕との距離も近いので、意思決定は驚くほど速いと思いますよ。</p></div></div><div class="qa-item"><div class="q">今回、営業職をはじめとする採用を強化していく背景を教えてください。</div><div class="a"><p>シンプルに言うと、事業の伸びに人が追いついていないんです。バニラコは2年で累計300万個を出荷して、取扱いは全国1万店舗まで広がりましたが、白地はまだまだ大きい。いまは「提案に行ける人の数が、そのまま売上の上限」になってしまっている状態です。</p><p>新しいブランドの立ち上げが、これからも続きます。この一番面白いタイミングを一緒に走ってくれる仲間が、どうしても必要なんです。</p></div></div><div class="qa-item"><div class="q">営業職のメンバーに期待している役割や、活躍してほしい姿を教えてください。</div><div class="a"><p>バイヤーさんと信頼関係を築いて、1万店舗の"面"をさらに広げてもらうことが一番の期待です。ただ、うちの営業は「売って終わり」ではありません。売場のデータを見て、どうすればもっと売れるかを提案して、売場を磨き込んでいくところまでが仕事です。</p><p>その代わり、資料作成や分析みたいな作業はAIに任せる仕組みをつくっています。人にしかできない、商談と関係構築に時間を使ってほしい。前職で「雑務に追われて商談に集中できない」と感じていた方ほど、働き方の違いに驚くと思います。</p></div></div><div class="qa-item"><div class="q">どのような方と一緒に働きたいと考えていますか。</div><div class="a"><p>スキルよりも姿勢です。ブランドの成長を自分ごととして動ける当事者意識。分からないことを素直に学べる向上心。AIを面白がれる好奇心。それから、手が空いたときに隣で困っている仲間に自然と声をかけられる人。少人数の会社なので、この最後の1つは本当に大事です。</p><p>逆に、指示待ちで決められたことだけやりたい方には、うちは窮屈だと思います。</p></div></div><div class="qa-item"><div class="q">入社後、どのようなキャリアを描けると考えていますか。</div><div class="a"><p>道は大きく3つあります。営業を深めて主要チャネルを任され、チームの数字を持つリーダーになる道。ブランド担当を経てブランドマネージャーとしてP/Lごと預かる道。そして業務改善やAI活用をリードして、経営企画として事業計画を設計する道です。</p><p>4年で売上100億円を目指している会社なので、事業が約5倍になれば、ポストも役割も同じだけ増えます。ポストが空くのを待つ会社ではなく、ポストが生まれ続ける会社です。</p></div></div><div class="qa-item"><div class="q">モノックだからこそ得られる経験や裁量について、どうお考えですか。</div><div class="a"><p>十数名で全国1万店舗の売場を動かしている会社は、なかなかないと思います。大手なら何十人で分業することを、一人が最初から最後まで持てる。ブランドの立ち上げも、TVCMも、スキンケア参入も、これから全部このメンバーで経験することになります。</p><p>それと、AIを「本気で」使う会社で働く経験は、これからのキャリアの武器になるはずです。2年分の仕事を1日で終わらせる働き方を、いま現場で身につけられる会社はまだ少ない。1年の差が圧倒的な差になる時代なので、ここで得られるものは大きいと思いますよ。</p></div></div><div class="qa-item"><div class="q">今後、会社としてどのような成長・展開を目指していますか。</div><div class="a"><p>4年後に売上100億円が目標です。道筋は3つで、新ブランドを立ち上げてスキンケアにも参入すること、AIの内製化で少人数のまま利益率を上げること、そして海外ブランドの独占ライセンスを増やしてポートフォリオを厚くすること。M&Aも視野に入れています。</p><p>数字はもちろん大事ですが、その先にあるのは「いいものが、正しく届く世界」です。モノックが売るなら間違いない、とブランドからも売場からも消費者からも思ってもらえる会社にしていきます。</p></div></div><div class="qa-item"><div class="q">最後に、応募を検討している方へメッセージをお願いします。</div><div class="a"><p>正直に言うと、モノックは全力で走っている会社です。僕自身が一番ハードワークしていて、同じ熱量で走れる方と働きたいと思っています。そのぶん、学びたい人には機会も情報も惜しみなく渡しますし、成果はまっすぐ評価します。</p><p>選考は、僕らが一方的に選ぶ場ではなくて、あなたにとってモノックが一番力を発揮できる場所かどうかを、一緒に確かめる場だと思っています。少しでも面白そうだなと思ったら、まずは気軽に話しに来てください。お会いできるのを楽しみにしています。</p></div></div>
+    </div>
+    <div style="margin-top:50px;display:flex;gap:14px;flex-wrap:wrap;"><a class="btn btn-primary" href="#entry">エントリー</a><a class="btn btn-ghost" href="#recruit">採用情報へ戻る</a></div>
   </div>
 </div>
 
@@ -1015,12 +1038,12 @@
   }
 
   /* ===== router ===== */
-  var reveal2=document.querySelectorAll('#page-company .kicker,#page-company h2,#page-company .sec-lead,.ctable,.hitem,#page-news .kicker,#page-news h2,#page-news .sec-lead,.news-item,#page-recruit .kicker,#page-recruit h2,#page-recruit .sec-lead,.rolecard,.flowstep,#page-contact .kicker,#page-contact h2,#page-contact .sec-lead,#page-entry .kicker,#page-entry h2,#page-entry .sec-lead,.cform');
+  var reveal2=document.querySelectorAll('#page-company .kicker,#page-company h2,#page-company .sec-lead,.ctable,.hitem,#page-news .kicker,#page-news h2,#page-news .sec-lead,.news-item,#page-recruit .kicker,#page-recruit h2,#page-recruit .sec-lead,.rolecard,.flowstep,#page-contact .kicker,#page-contact h2,#page-contact .sec-lead,#page-entry .kicker,#page-entry h2,#page-entry .sec-lead,#page-interview .kicker,#page-interview h2,#page-interview .sec-lead,.cform');
   var io2=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io2.unobserve(en.target);}});},{threshold:0.08});
   reveal2.forEach(function(el,i){el.classList.add('reveal');el.style.setProperty('--d',(Math.min(i%8,8)*0.06)+'s');io2.observe(el);});
   function route(){
     var h=(location.hash||'#home').slice(1);
-    var isPage={company:1,news:1,recruit:1,contact:1,entry:1}[h];
+    var isPage={company:1,news:1,recruit:1,contact:1,entry:1,interview:1}[h];
     var target=isPage?h:'home';
     document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});
     document.getElementById('page-'+target).classList.add('active');
@@ -1205,6 +1228,10 @@
 'いちばん面白いタイミングで、一緒に走る仲間を探しています。':['Join us at the most exciting moment.','가장 재미있는 타이밍에 함께 달릴 동료를 찾습니다.'],
 'スキンケア参入、新ブランドの立ち上げ——このフェーズの初期メンバーになれるのは、いまだけです。':['Skincare and new brand launches — you can only be an early member of this phase now.','스킨케어 진출, 새 브랜드 론칭 — 이 페이즈의 초기 멤버가 될 수 있는 건 지금뿐입니다.'],
 'エントリー':['Apply','지원하기'],
+'代表インタビュー全文を読む':['Read the full interview','대표 인터뷰 전문 읽기'],
+'代表インタビュー':['CEO Interview','대표 인터뷰'],
+'採用情報へ戻る':['Back to careers','채용 정보로 돌아가기'],
+'代表取締役 小澤一郎に、創業の背景からモノックのこれからまでを聞きました。':['We asked CEO Ichiro Ozawa about MONOC — from its founding story to what comes next.','오자와 이치로 대표에게 창업 배경부터 모노크의 미래까지 물었습니다.'],
 'エントリーする':['Submit application','지원하기'],
 '採用ピッチ資料を見る':['View recruiting deck (PDF)','채용 피치덱 보기 (PDF)'],
 '4年後の売上目標':['Revenue target in 4 years','4년 후 매출 목표'],

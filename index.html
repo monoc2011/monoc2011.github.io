@@ -437,6 +437,9 @@
   .cform .chks{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:2px;}
   .cform .chks label{display:flex;align-items:center;gap:7px;margin:0;font-size:12.5px;color:var(--ink);font-weight:700;letter-spacing:0;}
   .cform .chks input{width:auto;accent-color:var(--lav);}
+  .toc-link{display:inline-block;margin-top:18px;font-size:13px;font-weight:700;color:var(--lav);text-decoration:none;border:1.5px solid var(--lav);border-radius:999px;padding:11px 22px;transition:background .25s,color .25s;}
+  .toc-link:hover{background:var(--lav);color:#fff;}
+  .ec-note{margin-top:22px;background:#F1EDE7;border-radius:12px;padding:16px 20px;font-size:12.5px;color:var(--ink);font-weight:700;max-width:680px;}
   .deckwrap{margin-top:20px;max-width:900px;position:relative;aspect-ratio:560/315;border-radius:14px;overflow:hidden;box-shadow:0 18px 40px rgba(27,23,35,.12);background:#120E18;}
   .deckwrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
   .sentmsg{display:none;margin-top:16px;font-size:12.5px;font-weight:700;color:var(--lav);}
@@ -656,7 +659,7 @@
       <div class="hitem"><div class="y">2019</div><div class="t">D2C支援</div><div class="d">D2C STATION で40ブランドを支援</div></div>
       <div class="hitem"><div class="y">2024</div><div class="t">メーカー業</div><div class="d">バニラコの独占販売を開始</div></div>
       <div class="hitem"><div class="y">2025</div><div class="t">AI活用</div><div class="d">業務の内製化・高速化を本格化</div></div>
-      <div class="hitem"><div class="y">2026</div><div class="t">新ブランド続々立ち上げ</div><div class="d">スキンケア・フレグランスに参入。直近1年で14.5億円の資金調達</div></div>
+      <div class="hitem"><div class="y">2026</div><div class="t">新ブランド立ち上げ</div><div class="d">直近1年で14.5億円の資金調達</div></div>
     </div>
   </div>
 </div>
@@ -718,7 +721,7 @@
     </div>
     <div class="kicker en" style="margin-top:60px;">INTERVIEW</div>
     <div class="qa-wrap">
-      <div class="qa-item"><div class="q">今回、営業職をはじめとする採用を強化していく背景を教えてください。</div><div class="a"><p>シンプルに言うと、事業の伸びに人が追いついていないんです。バニラコは2年で累計300万個を出荷して、取扱いは全国1万店舗まで広がりましたが、白地はまだまだ大きい。いまは「提案に行ける人の数が、そのまま売上の上限」になってしまっている状態です。</p><p>新しいブランドの立ち上げが、これからも続きます。この一番面白いタイミングを一緒に走ってくれる仲間が、どうしても必要なんです。</p></div></div><div class="qa-item"><div class="q">どのような方と一緒に働きたいと考えていますか。</div><div class="a"><p>スキルよりも姿勢です。ブランドの成長を自分ごととして動ける当事者意識。分からないことを素直に学べる向上心。AIを面白がれる好奇心。それから、手が空いたときに隣で困っている仲間に自然と声をかけられる人。少人数の会社なので、この最後の1つは本当に大事です。</p><p>逆に、指示待ちで決められたことだけやりたい方には、うちは窮屈だと思います。</p></div></div>
+      <div class="qa-item"><div class="q">今回、営業職をはじめとする採用を強化していく背景を教えてください。</div><div class="a"><p>シンプルに言うと、事業の伸びに合わせて、仲間を増やしたいからです。バニラコの取扱いは全国1万店舗まで広がりましたが、白地はまだまだ大きい。攻めどころが増え続けているいまこそ、一緒に走ってくれる人が必要です。</p><p>新しいブランドの立ち上げが、これからも続きます。この一番面白いタイミングを一緒に走ってくれる仲間が、どうしても必要なんです。</p></div></div><div class="qa-item"><div class="q">どのような方と一緒に働きたいと考えていますか。</div><div class="a"><p>スキルよりも姿勢です。ブランドの成長を自分ごととして動ける当事者意識。分からないことを素直に学べる向上心。AIを面白がれる好奇心。それから、手が空いたときに隣で困っている仲間に自然と声をかけられる人。少人数の会社なので、この最後の1つは本当に大事です。</p><p>逆に、指示待ちで決められたことだけやりたい方には、うちは窮屈だと思います。</p></div></div>
       <a class="btn btn-ghost" style="margin-top:30px;" href="#interview">代表インタビュー全文を読む</a>
     </div>
     <a class="btn btn-primary" style="margin-top:44px;" href="#entry">エントリー</a>
@@ -776,17 +779,43 @@
   </div></div>
   <div class="container" style="padding-bottom:100px;">
     <div class="qa-wrap">
-      <div class="qa-item"><div class="q">ご自身の経歴と、モノックを創業された背景を教えてください。</div><div class="a"><p>起業したのは2011年、明治大学の法学部に在学中のときです。最初につくったのは化粧品ではなくて、papelookという写真アプリでした。ありがたいことに世界で2,000万ダウンロードまで伸びて、富士フイルムさんやサンリオさんと提携したり、いま思えばずいぶん遠いところからスタートしています。</p><p>そこから化粧品メディアのFAVOR(最大で月間160万人に使っていただきました)、資生堂さんやコーセーさんなど大手のマーケティング支援、D2Cブランドの立ち上げ支援と、少しずつ「化粧品を売る側」に近づいていって、2024年にバニラコの日本展開でついにメーカー業に踏み込みました。15年やってきて業態は何度も変わっていますが、「新しいテクノロジーで事業をつくる」という軸だけは一度も変わっていません。</p></div></div><div class="qa-item"><div class="q">創業当初、印象に残っている苦労や転機があれば教えてください。</div><div class="a"><p>苦労はもう、数えきれないですね(笑)。うちは15年の間に、アプリ→メディア→支援業→メーカー業と、事業を何度もつくり変えてきた会社です。それまで積み上げたものを一度手放して次に行く瞬間は、毎回怖かったです。</p><p>転機は間違いなく2つあって、1つは2024年にバニラコの独占販売を始めたこと。支援する側から「自分たちのブランドとして売り切る側」に回ったことで、会社の景色が全部変わりました。もう1つは、AIです。バニラコで積み上がった膨大なデータの分析をAIに任せてみたら、2年間手が付けられなかったものが1日で終わってしまった。iPhoneを初めて手にしたとき以来の衝撃で、「これは会社のやり方ごと変えるべきだ」と腹が決まりました。</p></div></div><div class="qa-item"><div class="q">会社として大切にしているビジョンや価値観を教えてください。</div><div class="a"><p>ビジョンは「いいものが、正しく届く世界へ。」です。世の中には、思いを込めてつくられた良い商品が、広告の体力や販路の運がないだけで埋もれていくという理不尽が本当にたくさんあります。それを減らすのがモノックの存在意義だと思っています。</p><p>そのためのやり方が「思いを込めてつくられたものを、思いを込めて売り、広める。」。うちは輸入して卸すだけの会社ではなくて、ブランドに惚れ込んで、企画から売場づくり、販促まで全部自分たちでやります。そして日々の判断基準としては「売場に答えがある」。会議室で悩む前に店頭を見に行く。これは全員に共通するカルチャーですね。</p></div></div><div class="qa-item"><div class="q">事業を通じて、どのようなお客様・社会への価値提供を目指していますか。</div><div class="a"><p>うちは3者の間に立つ会社なんです。海外のブランド本社、小売のバイヤーさん、そして消費者の方。この3者をつなぐ仕事は、実はバラバラには成立しません。</p><p>モノックが間に立って、企画から売場・販促までまとめて担うことで、ブランドは日本で花開き、売場は賑わい、消費者は「これ欲しかった!」に出会える。この三方良しの実例を増やしていくことが、僕らの社会への貢献だと思っています。</p></div></div><div class="qa-item"><div class="q">会社を運営されてきた中で、ご自身が大切にしてきたことを教えてください。</div><div class="a"><p>信頼です。古い言葉ですが「信なくば、立たず」で、商売は信頼を失ったら終わりです。だから、うちは盛った言葉で売ることはしません。数字も正直に出すし、できないことはできないと言う。</p><p>もう1つは、黒字経営を続けることです。派手な赤字成長より、ちゃんと利益を出しながら伸びるほうが、ブランドにも社員にも誠実だと思っています。おかげさまで直近期は売上が前期比で約2.7倍になりましたが、利益もきちんと残せています。</p></div></div><div class="qa-item"><div class="q">現在の組織体制や、役割分担について教えてください。</div><div class="a"><p>十数名の少数精鋭です。大きくは、営業やマーケティングを担うセールス&マーケティング、ブランドマネージャーや商品企画からなるブランド・商品、そして財務や受発注・ロジスティクスを支えるコーポレート・オペレーションの3つに分かれています。</p><p>ただ、正直なところ役割の線引きはかなりゆるやかです。肩書きより役割、というのがうちの考え方で、一人が受け持つ範囲がそのまま裁量の大きさになる。代表の僕との距離も近いので、意思決定は驚くほど速いと思いますよ。</p></div></div><div class="qa-item"><div class="q">今回、営業職をはじめとする採用を強化していく背景を教えてください。</div><div class="a"><p>シンプルに言うと、事業の伸びに人が追いついていないんです。バニラコは2年で累計300万個を出荷して、取扱いは全国1万店舗まで広がりましたが、白地はまだまだ大きい。いまは「提案に行ける人の数が、そのまま売上の上限」になってしまっている状態です。</p><p>新しいブランドの立ち上げが、これからも続きます。この一番面白いタイミングを一緒に走ってくれる仲間が、どうしても必要なんです。</p></div></div><div class="qa-item"><div class="q">営業職のメンバーに期待している役割や、活躍してほしい姿を教えてください。</div><div class="a"><p>バイヤーさんと信頼関係を築いて、1万店舗の"面"をさらに広げてもらうことが一番の期待です。ただ、うちの営業は「売って終わり」ではありません。売場のデータを見て、どうすればもっと売れるかを提案して、売場を磨き込んでいくところまでが仕事です。</p><p>その代わり、資料作成や分析みたいな作業はAIに任せる仕組みをつくっています。人にしかできない、商談と関係構築に時間を使ってほしい。前職で「雑務に追われて商談に集中できない」と感じていた方ほど、働き方の違いに驚くと思います。</p></div></div><div class="qa-item"><div class="q">どのような方と一緒に働きたいと考えていますか。</div><div class="a"><p>スキルよりも姿勢です。ブランドの成長を自分ごととして動ける当事者意識。分からないことを素直に学べる向上心。AIを面白がれる好奇心。それから、手が空いたときに隣で困っている仲間に自然と声をかけられる人。少人数の会社なので、この最後の1つは本当に大事です。</p><p>逆に、指示待ちで決められたことだけやりたい方には、うちは窮屈だと思います。</p></div></div><div class="qa-item"><div class="q">入社後、どのようなキャリアを描けると考えていますか。</div><div class="a"><p>道は大きく3つあります。営業を深めて主要チャネルを任され、チームの数字を持つリーダーになる道。ブランド担当を経てブランドマネージャーとしてP/Lごと預かる道。そして業務改善やAI活用をリードして、経営企画として事業計画を設計する道です。</p><p>4年で売上100億円を目指している会社なので、事業が約5倍になれば、ポストも役割も同じだけ増えます。ポストが空くのを待つ会社ではなく、ポストが生まれ続ける会社です。</p></div></div><div class="qa-item"><div class="q">モノックだからこそ得られる経験や裁量について、どうお考えですか。</div><div class="a"><p>十数名で全国1万店舗の売場を動かしている会社は、なかなかないと思います。大手なら何十人で分業することを、一人が最初から最後まで持てる。ブランドの立ち上げも、TVCMも、スキンケア参入も、これから全部このメンバーで経験することになります。</p><p>それと、AIを「本気で」使う会社で働く経験は、これからのキャリアの武器になるはずです。2年分の仕事を1日で終わらせる働き方を、いま現場で身につけられる会社はまだ少ない。1年の差が圧倒的な差になる時代なので、ここで得られるものは大きいと思いますよ。</p></div></div><div class="qa-item"><div class="q">今後、会社としてどのような成長・展開を目指していますか。</div><div class="a"><p>4年後に売上100億円が目標です。道筋は3つで、新ブランドを立ち上げてスキンケアにも参入すること、AIの内製化で少人数のまま利益率を上げること、そして海外ブランドの独占ライセンスを増やしてポートフォリオを厚くすること。M&Aも視野に入れています。</p><p>数字はもちろん大事ですが、その先にあるのは「いいものが、正しく届く世界」です。モノックが売るなら間違いない、とブランドからも売場からも消費者からも思ってもらえる会社にしていきます。</p></div></div><div class="qa-item"><div class="q">最後に、応募を検討している方へメッセージをお願いします。</div><div class="a"><p>モノックは、熱狂しながら走っている会社です。同じ熱量で、楽しみながら走れる方と働きたいと思っています。世界を席巻する韓国ブランドのグローバライゼーション——そのスピード感とダイナミックさを最前線で体感できる、またとない機会です。学びたい人には機会も情報も惜しみなく渡しますし、成果はまっすぐ評価します。</p><p>選考は、僕らが一方的に選ぶ場ではなくて、あなたにとってモノックが一番力を発揮できる場所かどうかを、一緒に確かめる場だと思っています。少しでも面白そうだなと思ったら、まずは気軽に話しに来てください。お会いできるのを楽しみにしています。</p></div></div>
+      <div class="qa-item"><div class="q">ご自身の経歴と、モノックを創業された背景を教えてください。</div><div class="a"><p>起業したのは2011年、明治大学の法学部に在学中のときです。最初につくったのは化粧品ではなくて、papelookという写真アプリでした。ありがたいことに世界で2,000万ダウンロードまで伸びて、富士フイルムさんやサンリオさんと提携したり、いま思えばずいぶん遠いところからスタートしています。</p><p>そこから化粧品メディアのFAVOR(最大で月間160万人に使っていただきました)、資生堂さんやコーセーさんなど大手のマーケティング支援、D2Cブランドの立ち上げ支援と、少しずつ「化粧品を売る側」に近づいていって、2024年にバニラコの日本展開でついにメーカー業に踏み込みました。15年やってきて業態は何度も変わっていますが、「新しいテクノロジーで事業をつくる」という軸だけは一度も変わっていません。</p></div></div><div class="qa-item"><div class="q">創業当初、印象に残っている苦労や転機があれば教えてください。</div><div class="a"><p>苦労はもう、数えきれないですね(笑)。うちは15年の間に、アプリ→メディア→支援業→メーカー業と、事業を何度もつくり変えてきた会社です。それまで積み上げたものを一度手放して次に行く瞬間は、毎回怖かったです。</p><p>転機は間違いなく2つあって、1つは2024年にバニラコの独占販売を始めたこと。支援する側から「自分たちのブランドとして売り切る側」に回ったことで、会社の景色が全部変わりました。もう1つは、AIです。バニラコで積み上がった膨大なデータの分析をAIに任せてみたら、2年間手が付けられなかったものが1日で終わってしまった。iPhoneを初めて手にしたとき以来の衝撃で、「これは会社のやり方ごと変えるべきだ」と腹が決まりました。</p></div></div><div class="qa-item"><div class="q">会社として大切にしているビジョンや価値観を教えてください。</div><div class="a"><p>ビジョンは「いいものが、正しく届く世界へ。」です。世の中には、思いを込めてつくられた良い商品が、広告の体力や販路の運がないだけで埋もれていくという理不尽が本当にたくさんあります。それを減らすのがモノックの存在意義だと思っています。</p><p>そのためのやり方が「思いを込めてつくられたものを、思いを込めて売り、広める。」。うちは輸入して卸すだけの会社ではなくて、ブランドに惚れ込んで、企画から売場づくり、販促まで全部自分たちでやります。そして日々の判断基準としては「売場に答えがある」。会議室で悩む前に店頭を見に行く。これは全員に共通するカルチャーですね。</p></div></div><div class="qa-item"><div class="q">事業を通じて、どのようなお客様・社会への価値提供を目指していますか。</div><div class="a"><p>うちは3者の間に立つ会社なんです。海外のブランド本社、小売のバイヤーさん、そして消費者の方。この3者をつなぐ仕事は、実はバラバラには成立しません。</p><p>モノックが間に立って、企画から売場・販促までまとめて担うことで、ブランドは日本で花開き、売場は賑わい、消費者は「これ欲しかった!」に出会える。この三方良しの実例を増やしていくことが、僕らの社会への貢献だと思っています。</p></div></div><div class="qa-item"><div class="q">会社を運営されてきた中で、ご自身が大切にしてきたことを教えてください。</div><div class="a"><p>信頼です。古い言葉ですが「信なくば、立たず」で、商売は信頼を失ったら終わりです。だから、うちは盛った言葉で売ることはしません。数字も正直に出すし、できないことはできないと言う。</p><p>もう1つは、黒字経営を続けることです。派手な赤字成長より、ちゃんと利益を出しながら伸びるほうが、ブランドにも社員にも誠実だと思っています。おかげさまで直近期は売上が前期比で約2.7倍になりましたが、利益もきちんと残せています。</p></div></div><div class="qa-item"><div class="q">現在の組織体制や、役割分担について教えてください。</div><div class="a"><p>十数名の少数精鋭です。大きくは、営業やマーケティングを担うセールス&マーケティング、ブランドマネージャーや商品企画からなるブランド・商品、そして財務や受発注・ロジスティクスを支えるコーポレート・オペレーションの3つに分かれています。</p><p>ただ、正直なところ役割の線引きはかなりゆるやかです。肩書きより役割、というのがうちの考え方で、一人が受け持つ範囲がそのまま裁量の大きさになる。代表の僕との距離も近いので、意思決定は驚くほど速いと思いますよ。</p></div></div><div class="qa-item"><div class="q">今回、営業職をはじめとする採用を強化していく背景を教えてください。</div><div class="a"><p>シンプルに言うと、事業の伸びに合わせて、仲間を増やしたいからです。バニラコの取扱いは全国1万店舗まで広がりましたが、白地はまだまだ大きい。攻めどころが増え続けているいまこそ、一緒に走ってくれる人が必要です。</p><p>新しいブランドの立ち上げが、これからも続きます。この一番面白いタイミングを一緒に走ってくれる仲間が、どうしても必要なんです。</p></div></div><div class="qa-item"><div class="q">営業職のメンバーに期待している役割や、活躍してほしい姿を教えてください。</div><div class="a"><p>バイヤーさんと信頼関係を築いて、1万店舗の"面"をさらに広げてもらうことが一番の期待です。ただ、うちの営業は「売って終わり」ではありません。売場のデータを見て、どうすればもっと売れるかを提案して、売場を磨き込んでいくところまでが仕事です。</p><p>その代わり、資料作成や分析みたいな作業はAIに任せる仕組みをつくっています。人にしかできない、商談と関係構築に時間を使ってほしい。前職で「雑務に追われて商談に集中できない」と感じていた方ほど、働き方の違いに驚くと思います。</p></div></div><div class="qa-item"><div class="q">どのような方と一緒に働きたいと考えていますか。</div><div class="a"><p>スキルよりも姿勢です。ブランドの成長を自分ごととして動ける当事者意識。分からないことを素直に学べる向上心。AIを面白がれる好奇心。それから、手が空いたときに隣で困っている仲間に自然と声をかけられる人。少人数の会社なので、この最後の1つは本当に大事です。</p><p>逆に、指示待ちで決められたことだけやりたい方には、うちは窮屈だと思います。</p></div></div><div class="qa-item"><div class="q">入社後、どのようなキャリアを描けると考えていますか。</div><div class="a"><p>道は大きく3つあります。営業を深めて主要チャネルを任され、チームの数字を持つリーダーになる道。ブランド担当を経てブランドマネージャーとしてP/Lごと預かる道。そして業務改善やAI活用をリードして、経営企画として事業計画を設計する道です。</p><p>4年で売上100億円を目指している会社なので、事業が約5倍になれば、ポストも役割も同じだけ増えます。ポストが空くのを待つ会社ではなく、ポストが生まれ続ける会社です。</p></div></div><div class="qa-item"><div class="q">モノックだからこそ得られる経験や裁量について、どうお考えですか。</div><div class="a"><p>十数名で全国1万店舗の売場を動かしている会社は、なかなかないと思います。大手なら何十人で分業することを、一人が最初から最後まで持てる。ブランドの立ち上げも、TVCMも、スキンケア参入も、これから全部このメンバーで経験することになります。</p><p>それと、AIを「本気で」使う会社で働く経験は、これからのキャリアの武器になるはずです。2年分の仕事を1日で終わらせる働き方を、いま現場で身につけられる会社はまだ少ない。1年の差が圧倒的な差になる時代なので、ここで得られるものは大きいと思いますよ。</p></div></div><div class="qa-item"><div class="q">今後、会社としてどのような成長・展開を目指していますか。</div><div class="a"><p>4年後に売上100億円が目標です。道筋は3つで、新ブランドを立ち上げてスキンケアにも参入すること、AIの内製化で少人数のまま利益率を上げること、そして海外ブランドの独占ライセンスを増やしてポートフォリオを厚くすること。M&Aも視野に入れています。</p><p>数字はもちろん大事ですが、その先にあるのは「いいものが、正しく届く世界」です。モノックが売るなら間違いない、とブランドからも売場からも消費者からも思ってもらえる会社にしていきます。</p></div></div><div class="qa-item"><div class="q">最後に、応募を検討している方へメッセージをお願いします。</div><div class="a"><p>モノックは、熱狂しながら走っている会社です。同じ熱量で、楽しみながら走れる方と働きたいと思っています。世界を席巻する韓国ブランドのグローバライゼーション——そのスピード感とダイナミックさを最前線で体感できる、またとない機会です。学びたい人には機会も情報も惜しみなく渡しますし、成果はまっすぐ評価します。</p><p>選考は、僕らが一方的に選ぶ場ではなくて、あなたにとってモノックが一番力を発揮できる場所かどうかを、一緒に確かめる場だと思っています。少しでも面白そうだなと思ったら、まずは気軽に話しに来てください。お会いできるのを楽しみにしています。</p></div></div>
     </div>
     <div style="margin-top:50px;display:flex;gap:14px;flex-wrap:wrap;"><a class="btn btn-primary" href="#entry">エントリー</a><a class="btn btn-ghost" href="#recruit">採用情報へ戻る</a></div>
+  </div>
+</div>
+
+<div class="page" id="page-support">
+  <div class="page-hero"><div class="container">
+    <div class="kicker en">CUSTOMER SUPPORT</div>
+    <h2>カスタマーサポート</h2>
+    <p class="sec-lead">モノックが取り扱うブランドの商品について、ご購入をご検討のお客様・ご購入いただいたお客様の窓口です。</p>
+    <p class="ec-note">ECサイト・モールでご購入のお客様は当フォームからはご対応出来かねます。各サイト・モールにお問い合わせください。</p>
+  </div></div>
+  <div class="container" style="padding-bottom:100px;">
+    <form class="cform" name="support" method="POST" action="https://formspree.io/f/xnpapawd">
+      <input type="hidden" name="_subject" value="【カスタマーサポート】monoc.inc">
+      <input type="text" name="_gotcha" style="display:none">
+      <label>ブランド</label>
+      <select name="ブランド" required><option>BANILA CO</option><option>POSTES</option><option>AESTHEFIC</option><option>NE:AR</option><option>その他</option></select>
+      <label>購入日</label><input type="date" name="購入日">
+      <label>購入場所(店舗名など)</label><input type="text" name="購入場所" required>
+      <label>お名前</label><input type="text" name="お名前" required>
+      <label>メールアドレス</label><input type="email" name="email" required>
+      <label>内容</label><textarea name="内容" required></textarea>
+      <label>添付(任意)</label>
+      <input type="file" name="添付" accept=".pdf,.jpg,.jpeg,.png,.heic">
+      <button class="btn btn-primary send" type="submit">送信する</button>
+    </form>
   </div>
 </div>
 
 <div class="page" id="page-contact">
   <div class="page-hero"><div class="container">
     <div class="kicker en">CONTACT</div>
-    <h2>お問い合わせ</h2>
+    <h2>法人向けお問い合わせ</h2>
     <p class="sec-lead">お取引・ブランドの日本展開・採用・取材のご相談など、お気軽にお問い合わせください。</p>
+    <a class="toc-link" href="#support">ご購入をご検討のお客様、ご購入いただいたお客様のお問い合わせはこちら →</a>
   </div></div>
   <div class="container" style="padding-bottom:80px;">
     <form class="cform" name="contact" method="POST" action="https://formspree.io/f/mwlevjov">
@@ -1041,12 +1070,12 @@
   }
 
   /* ===== router ===== */
-  var reveal2=document.querySelectorAll('#page-company .kicker,#page-company h2,#page-company .sec-lead,.ctable,.hitem,#page-news .kicker,#page-news h2,#page-news .sec-lead,.news-item,#page-recruit .kicker,#page-recruit h2,#page-recruit .sec-lead,.rolecard,.flowstep,#page-contact .kicker,#page-contact h2,#page-contact .sec-lead,#page-entry .kicker,#page-entry h2,#page-entry .sec-lead,#page-interview .kicker,#page-interview h2,#page-interview .sec-lead,.cform');
+  var reveal2=document.querySelectorAll('#page-company .kicker,#page-company h2,#page-company .sec-lead,.ctable,.hitem,#page-news .kicker,#page-news h2,#page-news .sec-lead,.news-item,#page-recruit .kicker,#page-recruit h2,#page-recruit .sec-lead,.rolecard,.flowstep,#page-contact .kicker,#page-contact h2,#page-contact .sec-lead,#page-entry .kicker,#page-entry h2,#page-entry .sec-lead,#page-interview .kicker,#page-interview h2,#page-interview .sec-lead,#page-support .kicker,#page-support h2,#page-support .sec-lead,.cform');
   var io2=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io2.unobserve(en.target);}});},{threshold:0.08});
   reveal2.forEach(function(el,i){el.classList.add('reveal');el.style.setProperty('--d',(Math.min(i%8,8)*0.06)+'s');io2.observe(el);});
   function route(){
     var h=(location.hash||'#home').slice(1);
-    var isPage={company:1,news:1,recruit:1,contact:1,entry:1,interview:1}[h];
+    var isPage={company:1,news:1,recruit:1,contact:1,entry:1,interview:1,support:1}[h];
     var target=isPage?h:'home';
     document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});
     document.getElementById('page-'+target).classList.add('active');
@@ -1232,6 +1261,16 @@
 'いちばん面白いタイミングで、一緒に走る仲間を探しています。':['Join us at the most exciting moment.','가장 재미있는 타이밍에 함께 달릴 동료를 찾습니다.'],
 'スキンケア参入、新ブランドの立ち上げ——このフェーズの初期メンバーになれるのは、いまだけです。':['Skincare and new brand launches — you can only be an early member of this phase now.','스킨케어 진출, 새 브랜드 론칭 — 이 페이즈의 초기 멤버가 될 수 있는 건 지금뿐입니다.'],
 'エントリー':['Apply','지원하기'],
+'法人向けお問い合わせ':['Business Inquiries','법인 문의'],
+'ご購入をご検討のお客様、ご購入いただいたお客様のお問い合わせはこちら →':['Customer support for shoppers and purchasers →','구매 검토·구매 고객 문의는 여기 →'],
+'カスタマーサポート':['Customer Support','고객 지원'],
+'モノックが取り扱うブランドの商品について、ご購入をご検討のお客様・ご購入いただいたお客様の窓口です。':['Support for customers of the brands MONOC distributes in Japan.','모노크가 취급하는 브랜드 상품에 대한 고객 문의 창구입니다.'],
+'ECサイト・モールでご購入のお客様は当フォームからはご対応出来かねます。各サイト・モールにお問い合わせください。':['For purchases made on e-commerce sites or marketplaces, please contact the site of purchase — we cannot handle those inquiries via this form.','EC 사이트·몰에서 구매하신 경우 본 양식으로는 대응이 어렵습니다. 구매하신 사이트·몰로 문의해 주세요.'],
+'ブランド':['Brand','브랜드'],
+'購入日':['Purchase date','구매일'],
+'購入場所(店舗名など)':['Place of purchase (store name)','구매 장소 (매장명 등)'],
+'内容':['Details','내용'],
+'添付(任意)':['Attachment (optional)','첨부 (선택)'],
 '代表インタビュー全文を読む':['Read the full interview','대표 인터뷰 전문 읽기'],
 '代表インタビュー':['CEO Interview','대표 인터뷰'],
 '採用情報へ戻る':['Back to careers','채용 정보로 돌아가기'],
@@ -1287,8 +1326,8 @@
 'バニラコの独占販売を開始':['Began exclusive distribution of BANILA CO','바닐라코 독점 판매 시작'],
 'AI活用':['AI adoption','AI 활용'],
 '業務の内製化・高速化を本格化':['Full-scale in-housing and acceleration with AI','업무 내재화·고속화 본격화'],
-'新ブランド続々立ち上げ':['New brands launching','신규 브랜드 연이어 론칭'],
-'スキンケア・フレグランスに参入。直近1年で14.5億円の資金調達':['Entered skincare & fragrance; raised ¥1.45B in the past year','스킨케어·프래그런스 진출. 최근 1년 14.5억 엔 조달'],
+'新ブランド立ち上げ':['New brand launches','신규 브랜드 론칭'],
+'直近1年で14.5億円の資金調達':['¥1.45B raised in the past year','최근 1년간 14.5억 엔 자금 조달'],
 'ニュース':['News','뉴스'],
 'モノックからのお知らせ・プレスリリース。':['Announcements and press releases from MONOC.','모노크의 소식·프레스 릴리스.'],
 '韓国発フレグランス「POSTES」が日本初上陸。渋谷スクランブルスクエアにてPOP UP STOREを開催':['Korean fragrance brand POSTES debuts in Japan with a pop-up at Shibuya Scramble Square','한국발 프래그런스 "POSTES" 일본 첫 상륙. 시부야 스크램블 스퀘어에서 팝업 스토어 개최'],
